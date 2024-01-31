@@ -1,0 +1,567 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+
+html{scroll-behavior: smooth;}
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #000;
+  background-color:linen;
+}
+
+/* Top Button */
+.top{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  z-index: 5;
+}
+.top a{
+  display:block;
+  width: 60px;
+  height: 60px;
+  background: url(../image/top.png) no-repeat;
+  transition: 0.35s;
+}
+
+.top a:hover{
+  background: url(../image/top2.png);
+}
+
+/* Header_______________________ */
+header{
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 80px;
+  background-color: lightsalmon;
+  position: fixed;
+  z-index: 3;
+}
+nav{
+  /* border: 1px solid red; */
+  position: relative;
+  width: 1300px;
+  height: inherit;
+  color: #fff;
+  margin: auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+}
+
+.logo{
+  position: absolute;
+  font-size: 24px;
+  top: 25px;
+  left: 0;
+}
+.gnb{display: flex;}
+.gnb li{margin: 0 20px;
+}
+.gnb li:nth-of-type(6){
+  margin: 0 10px;
+}
+.gnb li:nth-of-type(7){
+  margin: 0 10px;
+}
+.gnb li a{
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.gnb li a:hover{color: #996666;}
+
+/* main______________________________ */
+
+main{
+  width: 100%;
+  height: 800px;
+  background: url(../image/pink_1.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  transition: 0.5s;
+}
+main:before{
+content: '';
+position: absolute;
+width: 100%;
+height: 800px;
+background: rgba(0, 0, 0, 0.3);
+/* z-index: 1; */
+}
+
+.caption{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.caption h1{
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+.caption strong{
+  color: #ddd;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: -1px;
+  z-index: 2;
+}
+main:hover{
+  background-image: url(../image/wedding.jpg);
+}
+/* section____________________________ */
+
+section{
+  text-align: center;
+}
+
+#ABOUT{
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 200px;
+}
+
+.content{
+  /* border: 1px solid red; */
+  position: absolute;
+  width: 1200px;
+  height: 600px;
+  text-align: center;
+  bottom: 40%;
+}
+.content .item{
+  /* border: 1px solid burlywood; */
+  height:500px;
+  float: left;
+  width: calc(1200px / 2);
+  box-sizing: border-box;
+}
+.content .item1{
+  background: url(../image/violet_tulip1.jpg) no-repeat center center;
+}
+.content .item2{
+  /* font-family: 'Gowun Batang', serif; */
+  line-height: 30px;
+  background-color: #996666;
+  color: #fff;
+  text-align: left;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 38px;
+  
+}
+.content h2{
+  font-size: 40px;
+  color: #333;
+  margin-bottom:  100px;
+}
+
+
+/* SHOP_________________ */
+#SHOP{
+  width: 100%;
+}
+.shoph2{
+  margin-top: 200px;
+  font-size: 40px;
+}
+.shop{
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0 200px 0;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*{
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+.product{
+  /* border: 1px solid #000; */
+  width: 1200px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  grid-auto-rows: 1fr;
+}
+
+
+.photo1{
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caption1{
+  width:inherit;
+  height: inherit;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 10px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+.caption1 .fa-regular{
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.photo2{
+  width: 300px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caption2{
+  width:inherit;
+  height: inherit;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 10px;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  transition: 0.5s;
+}
+.caption2 .fa-regular{
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.photo3{
+  grid-area: span 2 / span 1;
+  width: 500px;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caption3{
+  width:inherit;
+  height: inherit;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 10px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+.caption3 .fa-regular{
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+
+
+.photo4{
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caption4{
+  width:inherit;
+  height: inherit;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 10px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+.caption4 .fa-regular{
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.photo5{
+  width: 300px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caption5{
+  width:inherit;
+  height: inherit;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 10px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+.caption5 .fa-regular{
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.photo1:hover .caption1{
+  opacity: 1;
+}
+.photo2:hover .caption2{
+  opacity: 1;
+}
+.photo3:hover .caption3{
+  opacity: 1;
+}
+.photo4:hover .caption4{
+  opacity: 1;
+}
+.photo5:hover .caption5{
+  opacity: 1;
+}
+
+
+
+/* 정기구독______________________ */
+
+
+h2{
+  margin-top: 150px;
+  font-size: 36px;
+
+}
+
+#subscribe{
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 500px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-top: 100px;
+}
+.Box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+  /* border: 1px solid #000; */
+  height: 400px;
+  float: left;
+  width: calc(1200px / 3);
+
+}
+.box1 img{
+  /* border: 1px solid #000; */
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.box2{
+  background-color: 
+  lightsalmon;
+  padding: 10px;
+  color: #fff;
+  line-height: 30px;
+position: relative;
+}
+.cap{
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  left: 0;
+  bottom: 30%;
+}
+.box2 p{
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.box3{
+  position: relative;
+}
+.box3 img{
+  /* border: 1px solid #000; */
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+/* REVIEW */
+
+#REVIEW{
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review{
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+#view1{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+#view2{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+#view3{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+#view4{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+article{
+  background-color: #fff;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+article:nth-child(1){
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 30px;
+  font-size: 250%;
+  font-weight: bold;
+  position:relative
+}
+
+.cap1{
+  width: 600px;
+  height: 150px;
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 42%;
+}
+.review .cap2{
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+  color: #333;
+}
+
+/* footer */
+
+footer{
+  width: 100%;
+  height: 300px;
+  background-color: lightsalmon;
+}
+
+.FOOTER{
+  position: relative;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+
+}
+address{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  color: #fff;
+  padding: 50px;
+  line-height: 30px;
+}
+
+
+.sns{
+  position: absolute;
+  top: 20px;
+  right: 0;
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  margin-right: 50px;
+  letter-spacing: 10px;
+}
+.FOOTER p{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  margin-right: 50px;
+}
+.sns a{
+  transition: 0.5s;
+}
+.sns a:hover{
+  color: coral;
+}
